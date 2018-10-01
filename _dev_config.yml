@@ -1,0 +1,63 @@
+baseurl: ""
+url: "http://localhost:4000"
+title: Yoga
+description: "Yoga sequences"
+permalink: /:title
+
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  title: Home
+  favicon: assets/favicon.ico
+
+  header_text: >
+    <h1>Yoga sequences</h1>
+  header_text_feature_image: assets/img/header.jpg
+  footer_text: >
+   Powered by <a href="https://pages.github.com/">GitHub pages</a>, <a href="https://jekyllrb.com/">Jekyll</a> with theme <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+
+  # Icons
+  rss: true  # Make sure you created a feed.xml with feed.xml layout
+
+  special_page:
+    search:
+      icon: "search" # Assuming page link and icon are the same
+      enabled: true
+    tags:
+      icon: "tags"
+      enabled: true
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_share_on: "Share on"
+  str_add_to: "Add to"
+  str_email: "Email"
+  str_tweet: "Tweet"
+  str_pin_it: "Pin it"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
+  str_continue_reading: "Continue reading"
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: true
+
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag]
+#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "package.json", "node_modules", "gulpfile.js", ".idea/*"]

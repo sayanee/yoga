@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if site.theme_settings.header_text %}
+  <div id="main" class="call-out"
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+    {{ site.theme_settings.header_text }}
+  </div>
+  {% endif %}
+
+  <div class="posts">
+    {% for post in site.posts %}
+    <div class="post-teaser">
+      {% if post.thumbnail %}
+      <div class="post-img">
+         <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
+      </div>
+      {% endif %}
+      <span>
+          <header>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h2>
+            <div class="tag-list">
+              {% for tag in post.tags %}
+              <a class="button" href="{{site.baseurl}}/tags#{{ tag | cgi_escape }}">
+                <p><i class="fa fa-{{ tag | downcase }} fa-fw"></i> {{ tag }}</p>
+              </a>
+              {% endfor %}
+            </div>
+          </header>
+          <div class="excerpt">
+            {{ post.excerpt | strip_html | escape }}
+          </div>
+      </span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
