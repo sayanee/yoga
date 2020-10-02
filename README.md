@@ -1,4 +1,4 @@
-# Yoga
+# Yoga - Stay Fit Stay Healthy
 
 > My personal list of Yoga sequences
 
